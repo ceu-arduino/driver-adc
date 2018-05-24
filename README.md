@@ -1,2 +1,2 @@
-# driver-adc-generic
-Driver - ADC - Generic
+# driver-adc
+Driver - ADC
