@@ -1,4 +1,5 @@
 #define CEU_ADC_IRQ_N _ADC_vect
+native/const _ADC_vect;
 
 #include "../adc.ceu"
 
