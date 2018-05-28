@@ -2,7 +2,7 @@
 #include "wclock.ceu"
 #include "adc.ceu"
 
-output on/off PIN_13;
+output high/low PIN_13;
 
 spawn Adc();
 

@@ -2,7 +2,7 @@
 #include "wclock.ceu"
 #include "adc.ceu"
 
-output on/off PIN_13;
+output high/low PIN_13;
 
 spawn Adc();
 
@@ -16,8 +16,8 @@ loop do
         v2 = await Adc_Conversion(_A1);
     end
     if v1+v2 > 2000 then
-        emit PIN_13(on);
+        emit PIN_13(high);
     else
-        emit PIN_13(off);
+        emit PIN_13(low);
     end
 end
