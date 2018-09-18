@@ -1,12 +1,12 @@
 // compile with CEU_DEFS=-DCEU_PM_MIN
 
-#include "gpio.ceu"
+#include "out.ceu"
 #include "wclock.ceu"
 #include "adc.ceu"
 
 #define CHANNEL _A0
 
-output high/low PIN_13;
+output high/low OUT_13;
 
 emit ADC(on);
 loop do
@@ -14,5 +14,5 @@ loop do
     emit ADC_REQUEST(CHANNEL);
     await ADC_DONE;
     var int value = adc_channels[CHANNEL-_A0].value;
-    emit PIN_13(value > 500);
+    emit OUT_13(value > 500);
 end

@@ -21,7 +21,7 @@ native/pre do
     }
 
     u16 ceu_adc_done (void) {
-        ceu_assert(bitRead(ADCSRA,ADSC) == 0, "bug found");
+        ceu_assert_sys(bitRead(ADCSRA,ADSC) == 0, "bug found");
         bitClear(ADCSRA, ADIE);
         return ADC;
     }
