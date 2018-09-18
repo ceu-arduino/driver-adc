@@ -23,6 +23,8 @@ code/await Adc (none) -> NEVER;
 
 Parameters:
 
+- `none`
+
 Return:
 
 - `NEVER`: never returns
